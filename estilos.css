@@ -1,0 +1,45 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	font-family:"Trebuchet MS", Tahoma, Verdana, Arial;
+}
+#w{
+	margin:2%;
+	width:96%;
+}
+p{
+	font-size:14px;
+}
+h2{
+	font-size:20px;
+}
+#boxagrega{
+	background-color:#EBB43D;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	padding:26px;
+}
+#boxagrega input{
+	width:11%;
+	height:22px;
+	border:1px solid #452F00;
+	padding:2px;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+
+#w ul{
+	line-height:1.5;
+	margin-bottom:12px;
+	list-style-position:inside;
+	margin:20px 0;
+}
+#w ul li{
+	line-height:1.5;
+}
+.txtlimite{
+	font-size:10px;
+}
