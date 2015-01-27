@@ -1,8 +1,5 @@
 function controlaTareas($scope){
-	for(i=0; i == localStorage.length; i++){
-		$scope.tareas[i] = localStorage.getItem( localStorage.key( i ) );
-		console.log(JSON.parse(localStorage.getItem( localStorage.key( i ))));
-	};
+
 	
 	$scope.tareas = [{'texto': 'Limpiar el living', 'fecha': '', 'hecho': false}]
 	
