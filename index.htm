@@ -15,12 +15,15 @@
 <br /><span class="txtlimite" ng-if="tarea.fecha">Límite: {{tarea.fecha}}</span></li>
 	</ul>
 	<div id="boxagrega">
-	<p>Agregar tarea:<br /><br />
+	<p>Agregar tarea:</p>
 	<form ng-submit="submit()" ng-model="formTareas" id="formTareas">
-	Descripción <input type="text" name="tarea" placeHolder="Tarea..." ng-model="texto"> Fecha límite (opcional) 
-	<input name="fecha" placeHolder="Fecha límite" ng-model="fecha" type="date" max="2020-12-31" min="2015-01-02"> <input type="submit" value="Agregar!">
+	<p><input type="text" name="tarea" placeHolder="Tarea..." ng-model="texto"> </p><p>Fecha límite (opcional): </p>
+	<p><input name="fecha" placeHolder="Fecha límite" ng-model="fecha" type="date" max="2020-12-31" min="2015-01-02"></p>
+        <p>
+            <input type="submit" value="Agregar!">
+        </p>
 	</form>
-	</p>
+        <p class="notifica">{{feedback}}</p>
 	</div>
 </div>
 </body>
