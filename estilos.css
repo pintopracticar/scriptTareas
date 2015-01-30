@@ -10,6 +10,8 @@
 }
 p{
 	font-size:14px;
+        line-height: 1.5;
+        margin-bottom:10px;
 }
 h2{
 	font-size:20px;
@@ -22,7 +24,7 @@ h2{
 	padding:26px;
 }
 #boxagrega input{
-	width:11%;
+	width:220px;
 	height:22px;
 	border:1px solid #452F00;
 	padding:2px;
@@ -36,10 +38,18 @@ h2{
 	margin-bottom:12px;
 	list-style-position:inside;
 	margin:20px 0;
+        list-style-type:none;
 }
 #w ul li{
 	line-height:1.5;
 }
 .txtlimite{
 	font-size:12px;
+        margin-left:18px;
+        display:inline-block;
 }
+.notifica{
+    color:#1C6900;
+    font-size:12px;
+}
+
