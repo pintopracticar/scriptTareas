@@ -15,6 +15,7 @@ p{
 }
 h2{
 	font-size:20px;
+        color:#F2A705;
 }
 #boxagrega{
 	background-color:#EBB43D;
@@ -42,6 +43,12 @@ h2{
 }
 #w ul li{
 	line-height:1.5;
+        padding:6px 4px;
+        border:2px solid #EBB43D;
+        margin:6px 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
 }
 .txtlimite{
 	font-size:12px;
