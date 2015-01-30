@@ -60,6 +60,7 @@ function controlaTareas($scope){
 		return cuenta;
 	}
         
+        // Funcion para borrar todas las tareas hechas, recorre el array mediante un for
         $scope.borraHechas = function(){
             for(i=0;i<=$scope.tareas.length;i++){
                 if($scope.tareas[i].hecho == true){
@@ -73,6 +74,7 @@ function controlaTareas($scope){
 angular.module('ngTestApp', []).controller('controlaTareas', controlaTareas);
 controlaTareas.$inject = ['$scope'];
 
+// Agrega la funcion que permite quitar de a un elemento dentro del array
 Array.prototype.remove = function(from, to) {
   var rest = this.slice((to || from) + 1 || this.length);
   this.length = from < 0 ? this.length + from : from;
