@@ -59,8 +59,22 @@ function controlaTareas($scope){
 		});
 		return cuenta;
 	}
+        
+        $scope.borraHechas = function(){
+            for(i=0;i<=$scope.tareas.length;i++){
+                if($scope.tareas[i].hecho == true){
+                    $scope.tareas.remove(i);
+                }
+            }
+        }
 };
 
 // NO BORRAR, necesitara esto o el script estallara en menos de 10 milisegundos
 angular.module('ngTestApp', []).controller('controlaTareas', controlaTareas);
 controlaTareas.$inject = ['$scope'];
+
+Array.prototype.remove = function(from, to) {
+  var rest = this.slice((to || from) + 1 || this.length);
+  this.length = from < 0 ? this.length + from : from;
+  return this.push.apply(this, rest);
+};
