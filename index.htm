@@ -12,7 +12,7 @@
 	<br />{{restantes()}} de {{tareas.length}}</p>
 	<ul>
 		<li ng-repeat="tarea in tareas" class="showtareas"><input type="checkbox" name="hecho" value="hecho" ng-model="tarea.hecho"> {{tarea.texto}}.
-<br /><span class="txtlimite" ng-if="tarea.fecha">Fecha límite: {{tarea.fecha}}</span></li>
+<br /><span class="txtlimite" ng-if="tarea.fecha">Límite: {{tarea.fecha}}</span></li>
 	</ul>
 	<div id="boxagrega">
 	<p>Agregar tarea:<br /><br />
