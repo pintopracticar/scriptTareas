@@ -1,6 +1,7 @@
 function controlaTareas($scope){
         // Booleano util en la validacion de tareas repetidas
         var igualdad = false;
+        var id = 1;
         // Array que contendra todos los objetos (tarea, fecha y hecho)
 	$scope.tareas = [];
 	
@@ -25,8 +26,9 @@ function controlaTareas($scope){
                 var fechaFormateada = dia+'/'+mes+'/'+anio;
                 // Si la tarea no esta repetida, entonces hay que agregarla al array tareas
                 if(igualdad == false){
-                $scope.tareas.push({texto:$scope.texto, fecha:fechaFormateada, hecho: false});
+                $scope.tareas.push({texto:$scope.texto, fecha:fechaFormateada, hecho: false, id: id});
                 $scope.feedback = 'Tarea agregada exitosamente';
+                id++;
 		$scope.texto = '';
 		$scope.fecha = '';
 		$scope.hecho = '';
@@ -35,8 +37,9 @@ function controlaTareas($scope){
                 //Si el usuario completo solamente el texto
             } else if ($scope.texto){
 		if(igualdad == false){
-                $scope.tareas.push({texto:$scope.texto, fecha:$scope.fecha, hecho: false});
+                $scope.tareas.push({texto:$scope.texto, fecha:$scope.fecha, hecho: false, id: id});
                 $scope.feedback = 'Tarea agregada exitosamente';
+                id++;
 		$scope.texto = '';
 		$scope.fecha = '';
 		$scope.hecho = '';
