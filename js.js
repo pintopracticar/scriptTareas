@@ -1,16 +1,37 @@
 function controlaTareas($scope){
-
+        var igualdad = false;
 	
 	$scope.tareas = [{'texto': 'Limpiar el living', 'fecha': '', 'hecho': false}]
 	
 	$scope.submit = function(){
-		viaja = $scope.tareas.push({texto:$scope.texto, fecha:$scope.fecha, hecho: false});
-		$scope.formTareas.texto = '';
-		$scope.formTareas.fecha = '';
-		$scope.formTareas.hecho = '';
-		total++;
-		localStorage.setItem('tarea', JSON.stringify(viaja));
-
+            angular.forEach($scope.tareas, function cheqIguales(tarea){
+                    if(tarea.texto == $scope.texto){
+                        igualdad = true;
+                        $scope.texto = '';
+                        igualdad = false;
+                    };
+                });
+            if ($scope.texto && $scope.fecha){
+		var dia = $scope.fecha.getDate();
+                var mes = $scope.fecha.getMonth()+1;
+                var anio = $scope.fecha.getFullYear();
+                var fechaFormateada = dia+'/'+mes+'/'+anio;
+                if(igualdad == false){
+                $scope.tareas.push({texto:$scope.texto, fecha:fechaFormateada, hecho: false});
+		$scope.texto = '';
+		$scope.fecha = '';
+		$scope.hecho = '';
+                igualdad == false;
+                }
+            } else if ($scope.texto){
+		if(igualdad == false){
+                $scope.tareas.push({texto:$scope.texto, fecha:$scope.fecha, hecho: false});
+		$scope.texto = '';
+		$scope.fecha = '';
+		$scope.hecho = '';
+                igualdad == false;
+                }
+            }
 	}
 	
 	$scope.restantes = function(){
